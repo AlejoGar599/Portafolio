@@ -5,113 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mi portafolio | Alejandro García Vega</title>
+    <meta name="description"
+          content="Portafolio personal de Alejandro García Vega, estudiante de Ingeniería de Software.">
+    <meta name="theme-color" content="#11111f">
+
+    <title>Alejandro García Vega | Portafolio</title>
 
     <style>
+        :root {
+            --fondo: #11111f;
+            --fondo-secundario: #191a2d;
+            --tarjeta: #202136;
+            --morado: #8b5cf6;
+            --morado-claro: #a78bfa;
+            --azul: #3b82f6;
+            --texto: #f1f0f8;
+            --texto-secundario: #b3b3c8;
+            --borde: #34354d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.6;
-            color: #202938;
-            background-color: #f8fafc;
-        }
-
-        header, section {
-            margin-bottom: 28px;
-        }
-
-        h1, h2 {
-            color: #24558a;
-        }
-
-        .proyecto {
-            border: 1px solid #d8dee8;
-            border-radius: 8px;
-            padding: 16px;
-            margin: 12px 0;
-            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--fondo);
+            color: var(--texto);
+            line-height: 1.7;
         }
 
         a {
-            color: #155db1;
+            color: inherit;
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        a:focus-visible {
+            outline: 2px solid var(--morado-claro);
+            outline-offset: 5px;
         }
-    </style>
-</head>
 
-<body>
+        .contenedor {
+            width: min(100% - 40px, 1000px);
+            margin: 0 auto;
+        }
 
-    <header>
-        <h1>Alejandro García Vega</h1>
+        /* Navegación */
 
-        <p>
-            Estudiante de Ingeniería de Software en la
-            Universidad de La Salle.
-        </p>
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(17, 17, 31, 0.92);
+            border-bottom: 1px solid var(--borde);
+            backdrop-filter: blur(12px);
+        }
 
-        <p>
-            Interesado en el desarrollo Full Stack,
-            la programación y la creación de soluciones
-            tecnológicas para problemas reales.
-        </p>
+        .navegacion {
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
 
-        <p>
-            <a href="https://www.linkedin.com/in/TU_USUARIO_LINKEDIN/"
-               target="_blank" rel="noopener noreferrer">
-                Mi LinkedIn
-            </a>
-            |
-            <a href="https://github.com/TU_USUARIO"
-               target="_blank" rel="noopener noreferrer">
-                Mi GitHub
-            </a>
-        </p>
-    </header>
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--morado-claro);
+        }
 
-    <section>
-        <h2>Sobre mí</h2>
+        .enlaces-nav {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
 
-        <p>
-            Soy estudiante de Ingeniería de Software con interés
-            en el desarrollo de aplicaciones web y en el aprendizaje
-            continuo de nuevas tecnologías.
-        </p>
-
-        <p>
-            Actualmente estoy fortaleciendo mis conocimientos en
-            Python, HTML y CSS, mientras desarrollo mis habilidades
-            en programación, pensamiento lógico y resolución de
-            problemas. Me interesa seguir aprendiendo JavaScript
-            y tecnologías de desarrollo frontend y backend para
-            construir aplicaciones funcionales y bien estructuradas.
-        </p>
-    </section>
-
-    <section>
-        <h2>Conocimientos e intereses</h2>
-
-        <ul>
-            <li>Python: fundamentos de programación.</li>
-            <li>HTML y CSS: estructura y diseño de páginas web.</li>
-            <li>JavaScript: aprendizaje y desarrollo web.</li>
-            <li>Git y GitHub: control de versiones y gestión de proyectos.</li>
-            <li>Desarrollo Full Stack y diseño de aplicaciones web.</li>
-            <li>Pensamiento lógico y resolución de problemas.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Proyectos</h2>
-
-        <article class="proyecto">
-            <h3>RutaFuel</h3>
-
-            <p>
-                Proyecto de desarrollo de software orientado a
-                resolver una necesidad relacionada con la movilidad
+        .en
